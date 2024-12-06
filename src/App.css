@@ -1,38 +1,282 @@
-.App {
-  text-align: center;
+.header
+{
+    padding: 1em;
+}
+.header h1
+{
+    margin-bottom: 0.5em;
+}
+.trackerHeaderContainer
+{
+    background-color: #626262;
+    color: white;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.expenseCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+    height: 12em;
+    width: 22em; 
+    padding: 1.5em; 
+    border-radius: 10px; 
+    background: rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
   }
+  
+.btn
+{
+    padding: 1em 4em;
+    border-radius: 12px;
+    font-size: large;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    color: white;
+}
+.piechart
+{
+    height: 18em;
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer
+{
+    display: flex;
+    gap: 3em;
+    padding: 1em;
+    align-items: flex-start;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.recordContainer
+{
+    flex: 2;
+    padding: 1em;
+}
+.chartTransaction
+{
+    flex: 1;
+    
+}
+.record 
+{
+    margin-top: 1em;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-radius: 12px;
+    padding: 1em;
+}
+.record_list_container
+{
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+.record_items
+{
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+}
+.record_logo
+{
+   
+    width: 2em;
+}
+.logo
+{
+    width: 100%;
+    height: 100%;
+}
+.record_price
+{
+    margin-right: 2em;
+    color: goldenrod;
+}
+.record_actions
+{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+.record_actions button
+{
+    height: 4em;
+    width: 4em;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.action-btn
+{
+    width: 80%;
+    height: 80%;
+    color: white;
+    
+}
+.actionBTN-close
+{
+    background-color: red;
+    
+}
+.actionBTN-edit
+{
+    background-color: gold;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.pagination
+{
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.pagination span
+{
+    height: 3.5em;
+    width: 3.5em;
+    text-align: center;
+    line-height: 3.5em;
+    color: white;
+    font-weight: bolder;
+    background-color: darkgreen;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+
+}
+.pagination button
+{
+    height: 3.5em;
+    width: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.pagination button *
+{
+    font-size: 1.7em;
+}
+.barchartholder
+{
+    padding: 1em;
+    height: 20em;
+}
+.barchart
+{
+    margin-top: 1em;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    height: 20em !important;
+    width: 25em !important;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color:#00000080;
+    color: white;
+}
+.addIncome_modal
+{
+    height: 8em;
+    padding: 2em;
+    width: 50em;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    border-radius: 1em;
+}
+.addIncome_modal input
+{
+    height: 3em;
+    width: 25em;
+    border-radius: 12px;
+    padding: 1em;
+}
+.addIncome_modal Button 
+{
+    height: 3em;
+    width: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.addExpense_modal
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: white;
+    color: black;
+    height: 30em;
+    width: 50em;
+    padding: 4em;
+}
+.addExpense_modal div
+{
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    width: 100%;
+}
+.addExpense_modal div input
+{
+    padding: 1em;
+    border: 1px solid black;
+    outline: none;
+    width: 50%;
+}
+.addExpense_modal div select
+{
+    padding: 1em;
+    width: 50%;
 }
